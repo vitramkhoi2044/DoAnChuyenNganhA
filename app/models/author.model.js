@@ -9,7 +9,7 @@ const Author = function(author){
 
 //Get
 Author.getAuthor = function(result){
-    db.query('SELECT * FROM author',function(err,author){
+    db.query('SELECT * FROM Author',function(err,author){
         if(err){
             result(err);
         }
@@ -21,7 +21,7 @@ Author.getAuthor = function(result){
 
 //Post
 Author.postAuthor = function(data,result){
-    db.query('INSERT INTO author SET ?', data, function(err,author){
+    db.query('INSERT INTO Author SET ?', data, function(err,author){
         if(err){
             result(null);
         }
@@ -33,7 +33,7 @@ Author.postAuthor = function(data,result){
 
 //Delete
 Author.deleteAuthor = function(id,result){
-    db.query('DELETE FROM author WHERE Author_id = ?', id, function(err,author){
+    db.query('DELETE FROM Author WHERE Author_id = ?', id, function(err,author){
         if(err){
             result(err);
         }

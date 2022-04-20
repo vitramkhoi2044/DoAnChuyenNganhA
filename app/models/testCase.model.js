@@ -9,7 +9,7 @@ const TestCase = function (testCase){
 
 //Get
 TestCase.getTestCase = function (result){
-    db.query('SELECT * FROM testcases',function (err,testcase){
+    db.query('SELECT * FROM Testcases',function (err,testcase){
         if(err){
             result(err);
         }
@@ -21,7 +21,7 @@ TestCase.getTestCase = function (result){
 
 //Post
 TestCase.postTestCase = function (data,result){
-    db.query('INSERT INTO testcases SET ?', data, function (err,testcase){
+    db.query('INSERT INTO Testcases SET ?', data, function (err,testcase){
         if(err){
             result(null);
         }
@@ -33,7 +33,7 @@ TestCase.postTestCase = function (data,result){
 
 //Delete
 TestCase.deleteTestCase = function (id,result){
-    db.query('DELETE FROM testcases WHERE ID = ?', id, function (err){
+    db.query('DELETE FROM Testcases WHERE ID = ?', id, function (err){
         if(err){
             result(err);
         }
