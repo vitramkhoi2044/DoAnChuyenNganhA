@@ -1,5 +1,10 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
+
+//Setup Port and Host
+const PORT = 4000;
+const HOST = '0.0.0.0';
+
 //setup Body-Parser
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended : false}));
@@ -18,6 +23,6 @@ app.use('/testcases', testCaseRouter);
 var authorRouter = require('./app/routes/author.router');
 app.use('/author', authorRouter);
 
-app.listen(4000,function(){
-    console.log("Server is running on port 4000");
+app.listen(PORT, HOST,function() {
+    console.log('Running on http://${HOST}:${PORT}'); 
 });
