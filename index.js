@@ -24,5 +24,5 @@ var authorRouter = require('./app/routes/author.router');
 app.use('/author', authorRouter);
 
 app.listen(PORT, HOST,function() {
-    console.log('Running on http://${HOST}:${PORT}'); 
+    console.log('Running on port 4000'); 
 });
