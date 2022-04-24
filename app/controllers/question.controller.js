@@ -22,16 +22,3 @@ exports.deleteQuestion = function(req, res){
         res.send({result:response});
     })
 }
-
-exports.getExamples = function(req, res){
-    var data = [
-        {"Question_id": 3,
-        "Title": "Tich",
-        "Description": "Tich a*b",
-        "CreateDate": "2022-04-15T17:00:00.000Z",
-        "Topic": "Co ban",
-        "Level": "De",
-        "Author_id": 1}
-    ];
-    res.send({result:data});
-}
