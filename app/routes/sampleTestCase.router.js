@@ -6,6 +6,5 @@ var sampleTestCaseController = require('../controllers/sampleTestCase.controller
 router.get('/getlist',sampleTestCaseController.getSampleTestCase);
 router.post('/add',sampleTestCaseController.postSampleTestCase);
 router.delete('/remove/:id',sampleTestCaseController.deleteSampleTestCase);
-router.get('/getexample',sampleTestCaseController.getExamples);
 
 module.exports = router;
