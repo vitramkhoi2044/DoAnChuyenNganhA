@@ -1,9 +1,13 @@
 const express = require('express');
+var cors = require('cors')
 const app = express();
 
 //Setup Port and Host
 const PORT = 4000;
 const HOST = "0.0.0.0";
+
+//set CORS
+app.use(cors());
 
 //setup Body-Parser
 var bodyParser = require('body-parser');
