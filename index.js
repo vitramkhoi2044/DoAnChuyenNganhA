@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 
 //setup Router
 var questionRouter = require('./app/routes/question.router');
-app.use('/question',questionRouter);
+app.use('/questions',questionRouter);
 
 var sampleTestCaseRouter = require('./app/routes/sampleTestCase.router');
 app.use('/sampletestcases', sampleTestCaseRouter);
@@ -25,7 +25,7 @@ var testCaseRouter = require('./app/routes/testCase.router');
 app.use('/testcases', testCaseRouter);
 
 var authorRouter = require('./app/routes/author.router');
-app.use('/author', authorRouter);
+app.use('/authors', authorRouter);
 
 var userRouter = require('./app/routes/user.router');
 app.use('/users',userRouter);
