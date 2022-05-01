@@ -11,7 +11,7 @@ exports.getAuthor = function (req, res) {
 exports.postAuthor = function (req, res) {
     var data = req.body;
     Author.postAuthor(data,function(response){
-        res.send(response);
+        res.send([response]);
     });
 }
 
@@ -19,6 +19,6 @@ exports.postAuthor = function (req, res) {
 exports.deleteAuthor = function (req, res) {
     var id = req.params.id;
     Author.deleteAuthor(id,function(response){
-        res.send({response});
+        res.send([response]);
     });
 }

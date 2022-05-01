@@ -11,7 +11,7 @@ exports.getUser = function (req, res) {
 exports.postUser = function (req, res) {
     var data = req.body;
     User.postUser(data, function (response){
-        res.send(response);
+        res.send([response]);
     });
 }
 
@@ -19,6 +19,6 @@ exports.postUser = function (req, res) {
 exports.deleteUser = function (req, res) {
     var id = req.params.id;
     User.deleteUser(id, function (response){
-        res.send({response});
+        res.send([response]);
     });
 }

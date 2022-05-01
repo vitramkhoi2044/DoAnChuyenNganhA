@@ -11,7 +11,7 @@ exports.getQuestion = function(req, res){
 exports.postQuestion = function(req, res){
     var data = req.body;
     Question.postQuestion(data,function(response){
-        res.send(response);
+        res.send([response]);
     });
 }
 
@@ -19,6 +19,6 @@ exports.postQuestion = function(req, res){
 exports.deleteQuestion = function(req, res){
     var id = req.params.id;
     Question.deleteQuestion(id,function(response){
-        res.send({response});
+        res.send([response]);
     })
 }

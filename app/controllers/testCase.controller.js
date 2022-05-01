@@ -11,7 +11,7 @@ exports.getTestCase = function (req, res) {
 exports.postTestCase = function (req, res) {
     var data = req.body;
     TestCase.postTestCase(data, function(response){
-        res.send(response);
+        res.send([response]);
     });
 }
 
@@ -19,6 +19,6 @@ exports.postTestCase = function (req, res) {
 exports.deleteTestCase = function (req, res) {
     var id = req.params.id;
     TestCase.deleteTestCase(id, function(response){
-        res.send({response});
+        res.send([response]);
     });
 }
