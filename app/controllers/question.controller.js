@@ -19,6 +19,6 @@ exports.postQuestion = function(req, res){
 exports.deleteQuestion = function(req, res){
     var id = req.params.id;
     Question.deleteQuestion(id,function(response){
-        res.send(response);
+        res.send({response});
     })
 }

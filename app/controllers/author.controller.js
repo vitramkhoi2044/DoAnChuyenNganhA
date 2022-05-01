@@ -19,6 +19,6 @@ exports.postAuthor = function (req, res) {
 exports.deleteAuthor = function (req, res) {
     var id = req.params.id;
     Author.deleteAuthor(id,function(response){
-        res.send(response);
+        res.send({response});
     });
 }

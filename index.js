@@ -27,6 +27,9 @@ app.use('/testcases', testCaseRouter);
 var authorRouter = require('./app/routes/author.router');
 app.use('/author', authorRouter);
 
+var userRouter = require('./app/routes/user.router');
+app.use('/users',userRouter);
+
 app.listen(PORT, HOST,function() {
     console.log('Running on Port 4000'); 
 });

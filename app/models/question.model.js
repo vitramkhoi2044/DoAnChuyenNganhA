@@ -12,7 +12,7 @@ const Question= function (question){
 
 //Get
 Question.getQuestion = function (result){
-    db.query('SELECT * FROM question',function (err,question){
+    db.query('SELECT * FROM Questions',function (err,question){
         if(err){
             result(err);
         }
@@ -24,7 +24,7 @@ Question.getQuestion = function (result){
 
 //Post
 Question.postQuestion = function (data,result){
-    db.query('INSERT INTO question SET ?', data, function (err,question){
+    db.query('INSERT INTO Questions SET ?', data, function (err,question){
         if(err){
             result(null);
         }
@@ -36,7 +36,7 @@ Question.postQuestion = function (data,result){
 
 //Delete
 Question.deleteQuestion = function (id,result){
-    db.query('DELETE FROM question WHERE Question_id = ?', id, function (err){
+    db.query('DELETE FROM Questions WHERE Question_id = ?', id, function (err){
         if(err){
             result(err);
         }

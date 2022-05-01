@@ -19,6 +19,6 @@ exports.postSampleTestCase = function (req, res) {
 exports.deleteSampleTestCase = function (req, res) {
     var id = req.params.id;
     SampleTestCase.deleteSampleTestCase(id, function(response){
-        res.send(response);
+        res.send({response});
     });
 }
