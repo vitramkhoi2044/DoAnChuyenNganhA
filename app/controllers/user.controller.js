@@ -7,6 +7,14 @@ exports.getUser = function (req, res) {
     });
 }
 
+//Get method
+exports.getPwdUser = function (req, res) {
+    var email = req.params.email;
+    User.getPwdUser(email,function (data){
+        res.send(data);
+    });
+}
+
 //Post method
 exports.postUser = function (req, res) {
     var data = req.body;

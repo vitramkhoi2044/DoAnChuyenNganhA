@@ -20,6 +20,18 @@ User.getUser = function(result){
     });
 }
 
+//Get Password
+User.getPwdUser = function(email,result){
+    db.query("SELECT Password FROM Users WHERE Email = ?",email,function(err,user){
+        if(err){
+            result(err);
+        }
+        else{
+            result(user);
+        }
+    });
+}
+
 //Post
 User.postUser = function(data,result){
     db.query("INSERT INTO Users SET ?",data,function(err,user){
