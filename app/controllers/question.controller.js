@@ -7,6 +7,13 @@ exports.getQuestion = function (req, res) {
     });
 }
 
+//Get method
+exports.getLastIdQuestion = function (req, res) {
+    Question.getLastIdQuestion(function (data) {
+        res.send(data);
+    });
+}
+
 //Post method
 exports.postQuestion = function (req, res) {
     var data = req.body;

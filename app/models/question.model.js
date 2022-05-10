@@ -22,6 +22,18 @@ Question.getQuestion = function (result) {
     });
 }
 
+//Get Last Id Question
+Question.getLastIdQuestion = function (result) {
+    db.query('SELECT Question_id FROM Questions ORDER BY Question_id DESC LIMIT 1;', function (err, question) {
+        if (err) {
+            result(err);
+        }
+        else {
+            result(question);
+        }
+    });
+}
+
 //Post
 Question.postQuestion = function (data, result) {
     db.query('INSERT INTO Questions SET ?', data, function (err, question) {
