@@ -2,7 +2,7 @@ var SampleTestCase = require('../models/sampleTestCase.model');
 
 //Get method
 exports.getSampleTestCase = function (req, res) {
-    SampleTestCase.getSampleTestCase(function(data) {
+    SampleTestCase.getSampleTestCase(function (data) {
         res.send(data);
     });
 }
@@ -10,7 +10,7 @@ exports.getSampleTestCase = function (req, res) {
 //Post method
 exports.postSampleTestCase = function (req, res) {
     var data = req.body;
-    SampleTestCase.postSampleTestCase(data, function(response){
+    SampleTestCase.postSampleTestCase(data, function (response) {
         res.send([response]);
     });
 }
@@ -18,7 +18,7 @@ exports.postSampleTestCase = function (req, res) {
 //Delete method
 exports.deleteSampleTestCase = function (req, res) {
     var id = req.params.id;
-    SampleTestCase.deleteSampleTestCase(id, function(response){
+    SampleTestCase.deleteSampleTestCase(id, function (response) {
         res.send([response]);
     });
 }

@@ -2,7 +2,7 @@ var User = require('../models/user.model');
 
 //Get method
 exports.getUser = function (req, res) {
-    User.getUser(function (data){
+    User.getUser(function (data) {
         res.send(data);
     });
 }
@@ -10,7 +10,7 @@ exports.getUser = function (req, res) {
 //Get method
 exports.getPwdUser = function (req, res) {
     var email = req.params.email;
-    User.getPwdUser(email,function (data){
+    User.getPwdUser(email, function (data) {
         res.send(data);
     });
 }
@@ -18,7 +18,7 @@ exports.getPwdUser = function (req, res) {
 //Post method
 exports.postUser = function (req, res) {
     var data = req.body;
-    User.postUser(data, function (response){
+    User.postUser(data, function (response) {
         res.send([response]);
     });
 }
@@ -26,7 +26,7 @@ exports.postUser = function (req, res) {
 //Delete method
 exports.deleteUser = function (req, res) {
     var id = req.params.id;
-    User.deleteUser(id, function (response){
+    User.deleteUser(id, function (response) {
         res.send([response]);
     });
 }

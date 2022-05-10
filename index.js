@@ -11,12 +11,12 @@ app.use(cors());
 
 //setup Body-Parser
 var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({extended : false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //setup Router
 var questionRouter = require('./app/routes/question.router');
-app.use('/questions',questionRouter);
+app.use('/questions', questionRouter);
 
 var sampleTestCaseRouter = require('./app/routes/sampleTestCase.router');
 app.use('/sampletestcases', sampleTestCaseRouter);
@@ -28,8 +28,8 @@ var authorRouter = require('./app/routes/author.router');
 app.use('/authors', authorRouter);
 
 var userRouter = require('./app/routes/user.router');
-app.use('/users',userRouter);
+app.use('/users', userRouter);
 
-app.listen(PORT, HOST,function() {
-    console.log('Running on Port 4000'); 
+app.listen(PORT, HOST, function () {
+    console.log('Running on Port 4000');
 });
