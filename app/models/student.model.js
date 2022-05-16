@@ -32,6 +32,18 @@ Student.getPwdStudent = function (email, result) {
     });
 }
 
+//Get FullName and Author ID
+Student.getInformationStudent = function (email, result) {
+    db.query("SELECT Student_id, FullName FROM Students WHERE Email = ?", email, function (err, student) {
+        if (err) {
+            result(err);
+        }
+        else {
+            result(student);
+        }
+    });
+}
+
 //Post
 Student.postStudent = function (data, result) {
     db.query("INSERT INTO Students SET ?", data, function (err, student) {

@@ -5,6 +5,7 @@ var studentController = require('../controllers/student.controller');
 
 router.get('/getlist', studentController.getStudent);
 router.get('/getpassword/:email', studentController.getPwdStudent);
+router.get('/getinformation/:email', studentController.getInformationStudent);
 router.post('/add', studentController.postStudent);
 router.delete('/remove/:id', studentController.deleteStudent);
 

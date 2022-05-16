@@ -15,6 +15,14 @@ exports.getPwdStudent = function (req, res) {
     });
 }
 
+//Get method
+exports.getInformationStudent = function (req, res) {
+    var email = req.params.email;
+    Student.getInformationStudent(email, function (data) {
+        res.send(data);
+    });
+}
+
 //Post method
 exports.postStudent = function (req, res) {
     var data = req.body;
