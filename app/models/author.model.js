@@ -45,18 +45,6 @@ Author.getInformationAuthor = function (email, result) {
     });
 }
 
-//Get Total Question
-Author.getTotalQuestionAuthor = function (email, result) {
-    db.query("SELECT Total_question FROM Authors WHERE Email = ?", email, function (err, author) {
-        if (err) {
-            result(err);
-        }
-        else {
-            result(author);
-        }
-    });
-}
-
 //Post
 Author.postAuthor = function (data, result) {
     db.query('INSERT INTO Authors SET ?', data, function (err, author) {
@@ -77,18 +65,6 @@ Author.deleteAuthor = function (id, result) {
         }
         else {
             result('Delete author has id: ' + id + ' successful');
-        }
-    });
-}
-
-//Put Total Question
-Author.putTotalQuestionAuthor = function (data, result) {
-    db.query('UPDATE Authors SET Total_question = ? WHERE Author_id = ?',[data.Total_question, data.Author_id], function(err){
-        if (err){
-            result(null);
-        }
-        else {
-            result(data);
         }
     });
 }

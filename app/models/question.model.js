@@ -12,7 +12,19 @@ const Question = function (question) {
 
 //Get
 Question.getQuestion = function (result) {
-    db.query('SELECT * FROM Questions', function (err, question) {
+    db.query('SELECT * FROM Questions ORDER BY CreateDate DESC', function (err, question) {
+        if (err) {
+            result(err);
+        }
+        else {
+            result(question);
+        }
+    });
+}
+
+//Get List Question By Level
+Question.getQuestionByLevel = function (level, result) {
+    db.query('SELECT * FROM Questions WHERE Level = ? ORDER BY CreateDate DESC', level, function (err, question) {
         if (err) {
             result(err);
         }
