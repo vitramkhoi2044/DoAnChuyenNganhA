@@ -22,18 +22,6 @@ Question.getQuestion = function (result) {
     });
 }
 
-//Get List Question By Level
-Question.getQuestionByLevel = function (level, result) {
-    db.query('SELECT * FROM Questions WHERE Level = ? ORDER BY CreateDate DESC', level, function (err, question) {
-        if (err) {
-            result(err);
-        }
-        else {
-            result(question);
-        }
-    });
-}
-
 //Get Last Id Question
 Question.getLastIdQuestion = function (result) {
     db.query('SELECT Question_id FROM Questions ORDER BY Question_id DESC LIMIT 1;', function (err, question) {

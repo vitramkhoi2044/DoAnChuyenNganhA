@@ -8,14 +8,6 @@ exports.getQuestion = function (req, res) {
 }
 
 //Get method
-exports.getQuestionByLevel = function (req, res) {
-    var level = req.params.level;
-    Question.getQuestionByLevel(level,function (data) {
-        res.send(data);
-    });
-}
-
-//Get method
 exports.getLastIdQuestion = function (req, res) {
     Question.getLastIdQuestion(function (data) {
         res.send(data);
