@@ -3,6 +3,7 @@ const db = require('../databases/connectDB');
 var HistoryPractice = function (historyPractice) {
     this.ID = historyPractice.ID;
     this.Question_id = historyPractice.Question_id;
+    this.Question_description = historyPractice.Question_description;
     this.Student_id = historyPractice.Student_id;
     this.Pass = historyPractice.Pass;
     this.Testcase_fail = historyPractice.Testcase_fail;
