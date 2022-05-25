@@ -30,6 +30,9 @@ app.use('/authors', authorRouter);
 var studentRouter = require('./app/routes/student.router');
 app.use('/students', studentRouter);
 
+var HistoryPracticeRouter = require('./app/routes/historyPractice.router');
+app.use('/historypractices', HistoryPracticeRouter);
+
 app.listen(PORT, HOST, function () {
     console.log('Running on Port 4000');
 });
