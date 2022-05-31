@@ -9,8 +9,8 @@ exports.getHistoryPractice = function (req, res) {
 
 //Get method
 exports.getHistoryPracticeById = function (req, res) {
-    var ID = req.params.ID;
-    HistoryPractice.getHistoryPracticeById(ID, function (data) {
+    var Id = req.params.Id;
+    HistoryPractice.getHistoryPracticeByStudentId(Id, function (data) {
         res.send(data);
     });
 }

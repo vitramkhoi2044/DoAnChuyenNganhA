@@ -24,8 +24,8 @@ HistoryPractice.getHistoryPractice = function (result) {
 }
 
 //Get by Student ID
-HistoryPractice.getHistoryPracticeByStudentId = function (ID, result) {
-    db.query('SELECT * FROM HistoryPractices WHERE Student_id = ? ORDER BY Submit_date DESC', ID, function (err, historyPractice) {
+HistoryPractice.getHistoryPracticeByStudentId = function (Id, result) {
+    db.query('SELECT * FROM HistoryPractices WHERE Student_id = ? ORDER BY Submit_date DESC', Id, function (err, historyPractice) {
         if (err) {
             result(err);
         }
