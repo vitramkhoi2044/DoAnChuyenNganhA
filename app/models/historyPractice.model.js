@@ -8,6 +8,7 @@ var HistoryPractice = function (historyPractice) {
     this.Pass = historyPractice.Pass;
     this.Testcase_fail = historyPractice.Testcase_fail;
     this.Source_code = historyPractice.Source_code;
+    this.Languages = historyPractice.Languages;
     this.Submit_date = historyPractice.Submit_date;
 }
 
