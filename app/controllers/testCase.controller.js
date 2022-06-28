@@ -7,6 +7,14 @@ exports.getTestCase = function (req, res) {
     });
 }
 
+//Get method
+exports.getTestCaseByQuestionId = function (req, res) {
+    var id = req.params.id;
+    TestCase.getTestCaseByQuestionId(id, function (data) {
+        res.send(data);
+    });
+}
+
 //Post method
 exports.postTestCase = function (req, res) {
     var data = req.body;

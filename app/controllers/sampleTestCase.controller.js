@@ -7,6 +7,14 @@ exports.getSampleTestCase = function (req, res) {
     });
 }
 
+//Get method
+exports.getSampleTestCaseByQuestionID = function (req, res) {
+    var id = req.params.id
+    SampleTestCase.getSampleTestCaseByQuestionId(id, function (data) {
+        res.send(data);
+    });
+}
+
 //Post method
 exports.postSampleTestCase = function (req, res) {
     var data = req.body;

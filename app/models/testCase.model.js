@@ -19,6 +19,18 @@ TestCase.getTestCase = function (result) {
     });
 }
 
+//Get by question id
+TestCase.getTestCaseByQuestionId = function (id, result) {
+    db.query('SELECT * FROM Testcases WHERE Question_id = ?', id, function (err, testcase) {
+        if (err) {
+            result(err);
+        }
+        else {
+            result(testcase);
+        }
+    });
+}
+
 //Post
 TestCase.postTestCase = function (data, result) {
     db.query('INSERT INTO Testcases SET ?', data, function (err, testcase) {

@@ -19,6 +19,18 @@ SampleTestCase.getSampleTestCase = function (result) {
     });
 }
 
+//Get by question id
+SampleTestCase.getSampleTestCaseByQuestionId = function (id, result) {
+    db.query('SELECT * FROM SampleTestcases WHERE Question_id = ?', id, function (err, sampletestcase) {
+        if (err) {
+            result(err);
+        }
+        else {
+            result(sampletestcase);
+        }
+    });
+}
+
 //Post
 SampleTestCase.postSampleTestCase = function (data, result) {
     db.query('INSERT INTO SampleTestcases SET ?', data, function (err, sampletestcase) {
