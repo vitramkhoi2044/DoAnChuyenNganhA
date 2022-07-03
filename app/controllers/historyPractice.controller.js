@@ -8,9 +8,17 @@ exports.getHistoryPractice = function (req, res) {
 }
 
 //Get method
-exports.getHistoryPracticeById = function (req, res) {
+exports.getHistoryPracticeByStudentId = function (req, res) {
     var Id = req.params.Id;
     HistoryPractice.getHistoryPracticeByStudentId(Id, function (data) {
+        res.send(data);
+    });
+}
+
+//Get method
+exports.getHistoryPracticeById = function (req, res) {
+    var Id = req.params.Id;
+    HistoryPractice.getHistoryPracticeById(Id, function (data) {
         res.send(data);
     });
 }
