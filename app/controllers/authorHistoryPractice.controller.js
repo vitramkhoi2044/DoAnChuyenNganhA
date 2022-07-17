@@ -23,6 +23,13 @@ exports.getAuthorHistoryPracticeById = function (req, res) {
     });
 }
 
+//Get method
+exports.getAuthorHistoryPracticeWithInformation = function (req, res) {
+    AuthorHistoryPractice.getAuthorHistoryPracticeWithInformation(function (data) {
+        res.send(data);
+    });
+}
+
 //Post method
 exports.postAuthorHistoryPractice = function (req, res) {
     var data = req.body;

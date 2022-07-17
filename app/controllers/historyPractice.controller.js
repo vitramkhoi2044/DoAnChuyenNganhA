@@ -23,6 +23,13 @@ exports.getHistoryPracticeById = function (req, res) {
     });
 }
 
+//Get method
+exports.getHistoryPracticeWithInformation = function (req, res) {
+    HistoryPractice.getHistoryPracticeWithInformation(function (data) {
+        res.send(data);
+    });
+}
+
 //Post method
 exports.postHistoryPractice = function (req, res) {
     var data = req.body;

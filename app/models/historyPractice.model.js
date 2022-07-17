@@ -48,6 +48,18 @@ HistoryPractice.getHistoryPracticeById = function (Id, result) {
     })
 }
 
+//Get with information user
+HistoryPractice.getHistoryPracticeWithInformation = function (result) {
+    db.query('SELECT ID, Question_id, Question_description, Pass, Testcase_fail, Source_code, Languages, s.Student_id, FullName, Email FROM HistoryPractices h JOIN Students s ON h.Student_id = s.Student_id  ORDER BY Submit_date DESC', function (err, historyPractice) {
+        if (err) {
+            result(err);
+        }
+        else {
+            result(historyPractice);
+        }
+    })
+}
+
 //Post
 HistoryPractice.postHistoryPractice = function (data, result) {
     db.query('INSERT INTO HistoryPractices SET ?', data, function (err, historyPractice) {
