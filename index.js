@@ -36,9 +36,6 @@ app.use('/historypractices', HistoryPracticeRouter);
 var AuthorHistoryPracticeRouter = require('./app/routes/authorHistoryPractice.router');
 app.use('/authorhistorypractices', AuthorHistoryPracticeRouter);
 
-//HTML
-app.use(express.static('public'));
-
 app.listen(PORT, HOST, function () {
     console.log('Running on Port 4000');
 });
